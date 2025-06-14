@@ -1,35 +1,26 @@
 import React from 'react';
-import BlogPostList from './components/BlogPostList.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BlogPostList from './components/BlogPostList';
+import BlogPostDetail from './components/BlogPostDetail';
+import BlogPostForm from './components/BlogPostForm';
+import { PostProvider } from './context/PostContext';
+import './App.css';
 
-const samplePosts = [
-  {
-    id: '1',
-    title: 'Getting Started with React',
-    summary: 'Learn the basics of React and build your first application.',
-    date: '2023-01-01',
-    url: '/posts/1',
-  },
-  {
-    id: '2',
-    title: 'CSS Grid vs. Flexbox',
-    summary: 'A comparison of two powerful layout systems in CSS.',
-    date: '2023-02-15',
-    url: '/posts/2',
-  },
-  {
-    id: '3',
-    title: 'Accessibility in Web Development',
-    summary: 'Tips for making your web applications more accessible.',
-    date: '2023-03-10',
-    url: '/posts/3',
-  },
-];
-
-const App = () => (
-  <div>
-    <h1 style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>Blog Posts</h1>
-    <BlogPostList posts={samplePosts} />
-  </div>
-);
+function App() {
+  return (
+    <PostProvider>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<BlogPostList />} />
+            <Route path="/post/:id" element={<BlogPostDetail />} />
+            <Route path="/create" element={<BlogPostForm />} />
+            <Route path="/edit/:id" element={<BlogPostForm />} />
+          </Routes>
+        </div>
+      </Router>
+    </PostProvider>
+  );
+}
 
 export default App;
