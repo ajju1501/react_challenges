@@ -1,0 +1,105 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.title {
+  margin: 0 0 20px;
+  color: #333333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  margin: 0 0 30px;
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.cancelButton,
+.confirmButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  min-height: 44px;
+}
+
+.cancelButton {
+  background-color: #CCCCCC;
+  color: #333333;
+}
+
+.cancelButton:hover {
+  background-color: #BBBBBB;
+}
+
+.confirmButton {
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+
+.confirmButton:hover {
+  background-color: #CC0000;
+}
+
+.cancelButton:focus,
+.confirmButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007BFF;
+}
+
+/* Mobile View (up to 768px) */
+@media screen and (max-width: 768px) {
+  .dialog {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cancelButton,
+  .confirmButton {
+    width: 100%;
+    font-size: 14px;
+  }
+} 

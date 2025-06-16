@@ -1,0 +1,308 @@
+.blogPostDetail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  display: inline-block;
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+.backButton:hover {
+  color: #0056b3;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  min-height: 44px;
+}
+
+.editButton:hover {
+  background-color: #0056b3;
+}
+
+.editButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007BFF;
+}
+
+.deleteButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: #FFFFFF;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.error {
+  background-color: #FFF3F3;
+  color: #DC3545;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #FFCDD2;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.metadata {
+  margin-bottom: 30px;
+}
+
+.author {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 16px;
+  color: #999999;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin: 1em 0 0.5em;
+  color: #333333;
+}
+
+.content p {
+  margin: 0 0 1em;
+}
+
+.content ul,
+.content ol {
+  margin: 0 0 1em;
+  padding-left: 2em;
+}
+
+.content a {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+.content a:hover {
+  color: #0056b3;
+}
+
+.notFoundContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.notFound {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+  margin: 0 0 15px;
+  color: #333333;
+  font-size: 24px;
+}
+
+.modal p {
+  margin: 0 0 20px;
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cancelButton,
+.confirmDeleteButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cancelButton {
+  background-color: #6c757d;
+  color: #FFFFFF;
+}
+
+.cancelButton:hover {
+  background-color: #5a6268;
+}
+
+.confirmDeleteButton {
+  background-color: #dc3545;
+  color: #FFFFFF;
+}
+
+.confirmDeleteButton:hover {
+  background-color: #c82333;
+}
+
+/* Tablet View (769px to 1199px) */
+@media screen and (max-width: 1199px) {
+  .blogPostDetail,
+  .notFoundContainer {
+    padding: 30px;
+  }
+}
+
+/* Mobile View (up to 768px) */
+@media screen and (max-width: 768px) {
+  .blogPostDetail,
+  .notFoundContainer {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .backButton {
+    font-size: 14px;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .editButton {
+    flex: 1;
+    font-size: 14px;
+  }
+
+  .error {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .author {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .content {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .metadata {
+    margin-bottom: 20px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal h2 {
+    font-size: 20px;
+  }
+
+  .modal p {
+    font-size: 14px;
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .cancelButton,
+  .confirmDeleteButton {
+    width: 100%;
+    font-size: 14px;
+  }
+} 

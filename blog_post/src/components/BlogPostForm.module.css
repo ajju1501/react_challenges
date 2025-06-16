@@ -1,0 +1,231 @@
+.blogPostForm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.formGroup label {
+  font-size: 16px;
+  color: #333333;
+  text-align: right;
+  padding-top: 8px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333333;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contentTabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tabButton {
+  padding: 8px 16px;
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666666;
+  transition: all 0.2s ease-in-out;
+}
+
+.tabButton.active {
+  background: #007BFF;
+  color: #FFFFFF;
+  border-color: #007BFF;
+}
+
+.preview {
+  padding: 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  min-height: 150px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.preview h1,
+.preview h2,
+.preview h3,
+.preview h4,
+.preview h5,
+.preview h6 {
+  margin: 1em 0 0.5em;
+  color: #333333;
+}
+
+.preview p {
+  margin: 0 0 1em;
+}
+
+.preview ul,
+.preview ol {
+  margin: 0 0 1em;
+  padding-left: 2em;
+}
+
+.preview a {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+.preview a:hover {
+  color: #0056b3;
+}
+
+.inputError {
+  border-color: #FF0000 !important;
+}
+
+.error {
+  color: #FF0000;
+  font-size: 14px;
+  margin-top: 5px;
+  grid-column: 2;
+}
+
+.submitError {
+  color: #FF0000;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submitButton,
+.cancelButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submitButton {
+  background-color: #007BFF;
+  color: #FFFFFF;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.cancelButton {
+  background-color: #6c757d;
+  color: #FFFFFF;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.submitButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Tablet View (769px to 1199px) */
+@media screen and (max-width: 1199px) {
+  .blogPostForm {
+    padding: 30px;
+  }
+}
+
+/* Mobile View (up to 768px) */
+@media screen and (max-width: 768px) {
+  .blogPostForm {
+    padding: 20px;
+  }
+
+  .formGroup {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .formGroup label {
+    text-align: left;
+    padding-top: 0;
+    font-size: 14px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 14px;
+  }
+
+  .error {
+    grid-column: 1;
+    font-size: 12px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .submitButton,
+  .cancelButton {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .contentTabs {
+    flex-direction: row;
+  }
+
+  .tabButton {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .preview {
+    font-size: 14px;
+  }
+} 
